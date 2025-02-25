@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+@import url('./reset.css');
+
+@font-face{
+  font-family : 'Pretendard';
+  src : url('./fonts/Pretendard-Variable.ttf');
+}  
+
+body{
+  font-family: 'Pretendard';
+}
+
+.expertise-wrapper {
+  display: flex;
+  width : 50%;
+  flex-wrap: wrap;
+  left : 5%;
+  top : 50%;
+  position: absolute;
+}
+
+.expertise {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: slideIn 0.5s ease-out forwards;
+  font-size : 48px;
+  font-weight: bold;
+  color : #FFF;
+  margin-bottom: 10px;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.video{
+  width: 100vw;
+  position: fixed;
+}
+
+.mainmenu-wrapper{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width : 100vw;
+  backdrop-filter: blur(10px);
+}
+
+
+.dropdown-menu{
+  position: absolute;
+  top: 100%;
+  width: 100vw;
+  overflow: hidden;
+  max-height: 0;
+  height : 400px;
+  opacity: 0;
+  background-color : inherit;
+  transition: max-height 0.3s ease-in-out, 
+              opacity 0.3s ease-in-out, 
+              transform 0.3s ease-in-out;
+}
+
+.header-container{
+  position: fixed;
+  display : flex;
+  background-color: transparent;
+  color: #FFF;
+  cursor: pointer;
+  z-index: 99;
+
+}
+
+.header-container:hover{
+  background-color : #FFF;
+  color : #000;
+}
+
+.header-container:hover button{
+  background-color : #FFF;
+  color : #000;
+  border : 1px solid #000;
+}
+
+.header-container:hover > div { 
+  max-height: 500px; 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+
+.menu-item{
+  flex: 1;
+  height : 60px;
+  line-height : 60px;
+  background-color: transparent;
+  text-align: center;
+  /* background-color: red;; */
+}
+
+.contact-button{
+  width: 100px;
+  height: 33px;
+  border-radius: 8px;
+  border: 1px solid #FFF;
+  background: transparent;
+  color: #FFF;
+}
+
+.detail-item{
+  text-align: center;
+  height : 40px;
+  /* background-color: purple; */
+}
+
+.detail-item-wrapper{
+  display : flex;
+  background-color: aqua;
+  padding-top : 40px;
+  margin-left : 118px;
+  margin-right : 100px;
+}
+
+.detail-item-group{
+  flex : 1;
+  display : flex;
+  flex-direction : column;
+  justify-content : flex-start;
+  border-right : 1px solid #000;
+}
+
+.detail-item-group:last-child{
+  border : none;
+}
