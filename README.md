@@ -1,50 +1,17 @@
-# React + TypeScript + Vite
+# 과제 프론트엔드
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+💻 개발환경
 
-Currently, two official plugins are available:
+- React v19.0.0 (Vite)
+- typescript v5.7.2
+- gasp v3.12.7
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🖥️ 실행 
+`npm run dev`
 
-## Expanding the ESLint configuration
+📓 구현 사항
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- 스타일은 루트 경로에 있는 App.css로 작성하였습니다.
+- 일부 텍스트 애니메이션 효과는 컴포넌트 내부에서 인라인 스타일로 적용하였습니다.
+- 이미지 슬라이드 효과는 원본 페이지와는 다르지만 기능을 사용하여 최대한 유사하도록 구현했습니다.
+  (사업실적 섹션 : Environmental consultancy firm )
